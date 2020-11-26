@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> kalkulator sederhana </title>
+    <style>
+        .wrap{
+            width : 400px;
+            margin:auto;
+            height : auto;
+            background: linear-gradient(50deg, #B000EA,black);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 1px 5px 10px black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrap">
+        <input type="number" id="angka1">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="angka2">
+        <span>=</span>
+        <span id="hasil">hasil</span><br><br>
+        <button id="submit">submit</button>
+    </div>
+
+    <script>
+        const angka1 = document.getElementById('angka1')
+        const angka2 = document.getElementById('angka2')
+        const operator = document.getElementById('operator')
+        const hasil = document.getElementById('hasil')
+        const submit = document.getElementById('submit')
+
+        submit.addEventListener('click', function(){
+            hasil.innerText = eval(angka1.value + operator.value + angka2.value)
+        })
+    </script>
+
+
+</body>
+</html>
